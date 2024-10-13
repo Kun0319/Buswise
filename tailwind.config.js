@@ -8,9 +8,31 @@ module.exports = {
         './src/**/*.{vue,js,ts,jsx,tsx}'
     ],
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                body     : '#F8F8F8',
+                primary  : '#355F8B',
+                secondary: '#D08181',
+                blue     : '#3591C5',
+                green    : '#7FC0C5',
+                teal     : '#5E9BAE',
+                dark     : {
+                    green: '#52797C',
+                    blue : '#283C43'
+                },
+                gray: {
+                    900: '#000000',
+                    700: '#444444',
+                    600: '#888888',
+                    500: '#D5D5D5',
+                    300: '#EEEEEE',
+                    100: '#F5F6F6'
+                }
+            }
+        }
     },
     plugins: [
+        require('@tailwindcss/forms'),
         plugin(({ addComponents }) => {
             addComponents({
                 '.text-h1': {
